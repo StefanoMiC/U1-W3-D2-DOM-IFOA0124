@@ -1,3 +1,104 @@
+const movies = [
+  {
+    Title: "The Lord of the Rings: The Fellowship of the Ring",
+    Year: "2001",
+    imdbID: "tt0120737",
+    Type: "movie",
+    Poster: "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg"
+  },
+  {
+    Title: "The Lord of the Rings: The Return of the King",
+    Year: "2003",
+    imdbID: "tt0167260",
+    Type: "movie",
+    Poster: "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+  },
+  {
+    Title: "The Lord of the Rings: The Two Towers",
+    Year: "2002",
+    imdbID: "tt0167261",
+    Type: "movie",
+    Poster: "https://m.media-amazon.com/images/M/MV5BNGE5MzIyNTAtNWFlMC00NDA2LWJiMjItMjc4Yjg1OWM5NzhhXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+  },
+  {
+    Title: "Lord of War",
+    Year: "2005",
+    imdbID: "tt0399295",
+    Type: "movie",
+    Poster: "https://m.media-amazon.com/images/M/MV5BMTYzZWE3MDAtZjZkMi00MzhlLTlhZDUtNmI2Zjg3OWVlZWI0XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg"
+  },
+  {
+    Title: "Lords of Dogtown",
+    Year: "2005",
+    imdbID: "tt0355702",
+    Type: "movie",
+    Poster: "https://m.media-amazon.com/images/M/MV5BNDBhNGJlOTAtM2ExNi00NmEzLWFmZTQtYTZhYTRlNjJjODhmXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg"
+  },
+  {
+    Title: "The Lord of the Rings",
+    Year: "1978",
+    imdbID: "tt0077869",
+    Type: "movie",
+    Poster: "https://m.media-amazon.com/images/M/MV5BOGMyNWJhZmYtNGQxYi00Y2ZjLWJmNjktNTgzZWJjOTg4YjM3L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+  },
+  {
+    Title: "Lord of the Flies",
+    Year: "1990",
+    imdbID: "tt0100054",
+    Type: "movie",
+    Poster: "https://m.media-amazon.com/images/M/MV5BOTI2NTQyODk0M15BMl5BanBnXkFtZTcwNTQ3NDk0NA@@._V1_SX300.jpg"
+  },
+  {
+    Title: "The Lords of Salem",
+    Year: "2012",
+    imdbID: "tt1731697",
+    Type: "movie",
+    Poster: "https://m.media-amazon.com/images/M/MV5BMjA2NTc5Njc4MV5BMl5BanBnXkFtZTcwNTYzMTcwOQ@@._V1_SX300.jpg"
+  },
+  {
+    Title: "Greystoke: The Legend of Tarzan, Lord of the Apes",
+    Year: "1984",
+    imdbID: "tt0087365",
+    Type: "movie",
+    Poster: "https://m.media-amazon.com/images/M/MV5BMTM5MzcwOTg4MF5BMl5BanBnXkFtZTgwOTQwMzQxMDE@._V1_SX300.jpg"
+  },
+  {
+    Title: "Lord of the Flies",
+    Year: "1963",
+    imdbID: "tt0057261",
+    Type: "movie",
+    Poster: "https://m.media-amazon.com/images/M/MV5BOGEwYTlhMTgtODBlNC00ZjgzLTk1ZmEtNmNkMTEwYTZiM2Y0XkEyXkFqcGdeQXVyMzU4Nzk4MDI@._V1_SX300.jpg"
+  },
+  {
+    Title: "The Avengers",
+    Year: "2012",
+    imdbID: "tt0848228",
+    Type: "movie",
+    Poster: "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+  },
+  {
+    Title: "Avengers: Infinity War",
+    Year: "2018",
+    imdbID: "tt4154756",
+    Type: "movie",
+    Poster: "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg"
+  },
+  {
+    Title: "Avengers: Age of Ultron",
+    Year: "2015",
+    imdbID: "tt2395427",
+    Type: "movie",
+    Poster: "https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg"
+  },
+  {
+    Title: "Avengers: Endgame",
+    Year: "2019",
+    imdbID: "tt4154796",
+    Type: "movie",
+    Poster: "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg"
+  }
+];
+
 // con la DOM Manipulation noi potremo alterare il contenuto della pagina già precedentemente caricata
 // potremo quindi INSERIRE/MODIFICARE/ELIMINARE qualsiasi cosa renderizzata al suo interno
 // e fare delle modifiche nel tempo anche a partire da un'interazione con l'utente
@@ -133,3 +234,84 @@ console.log("Header Styles", headerStyles.getPropertyValue("background-color"));
 
 header.style.backgroundColor = "lightblue";
 header.style.fontSize = "24px";
+
+// modifico l'immagine non funzionante
+// prima la seleziono
+// poi le aggiorno le proprietà!
+
+const imgNode = document.querySelector("img");
+imgNode.src = "https://images.unsplash.com/photo-1706378500840-928668179818?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+imgNode.style.width = "100%";
+imgNode.style.cursor = "pointer";
+
+imgNode.alt = "snowy mountain";
+console.dir(imgNode);
+
+// CREARE UN NUOVO ELEMENTO ED INSERIRLO NEL DOM
+// metodo .createElement()
+
+// creo gli elementi...
+const footer = document.createElement("footer");
+// li modifico nelle caratteristiche...
+// footer.style = "background-color: black; color: white; padding-block: 6rem";
+footer.className = "footer-styles";
+
+const p = document.createElement("p");
+p.style.margin = "0";
+p.innerText = "Blah Blah Blahhh";
+
+// inserisco il nodo del figlio dentro al nodo del padre
+footer.appendChild(p);
+document.body.appendChild(footer);
+
+console.log(footer);
+console.log(p);
+
+const item6 = document.createElement("li");
+item6.innerText = "item6";
+
+menu.appendChild(item6);
+
+const newDiv = document.createElement("div");
+newDiv.className = "extra-div-container";
+newDiv.innerHTML = `
+<div style="padding: 2rem; background-color: red; border: 2px solid blue">
+    <span style='color: purple'>blah <a href="https://epicode.com">blahhhhh</a></span>
+</div>`;
+
+// uso il genitore comune per comunicare la posizione precisa del mio nuovo elemento, che dovrà apparire in questo caso prima di footer
+document.body.insertBefore(newDiv, footer);
+
+// applicare una funzionalità al click di un qualche elemento della pagina
+
+const button = document.getElementById("remove-list-item");
+button.onclick = function () {
+  secondUl.lastElementChild.remove();
+};
+
+imgNode.onclick = function () {
+  imgNode.src = "https://images.unsplash.com/photo-1706505754377-ae2ebd8142af?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+  imgNode.alt = "another mountain";
+};
+
+const imageContainer = document.getElementById("movies-container");
+
+movies.forEach(movie => {
+  const movieImg = document.createElement("img");
+  movieImg.src = movie.Poster;
+
+  imageContainer.appendChild(movieImg);
+});
+
+const generateTitles = function () {
+  const ul = document.createElement("ul");
+
+  movies.forEach(movie => {
+    const li = document.createElement("li");
+    li.innerText = movie.Title;
+
+    ul.appendChild(li);
+  });
+
+  imageContainer.appendChild(ul);
+};
