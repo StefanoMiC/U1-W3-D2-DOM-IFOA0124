@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Traversing & Manipulation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+
+        }
+
+        header {
+            background-color: palegreen;
+            padding-block: 3rem;
+            padding-inline: 2rem;
+        }
+
+        header ul {
+            margin: 0;
+            display: inline-block;
+
+        }
+
+        header ul li {
+            display: inline-block;
+        }
+
+        header ul li:nth-child(2) {
+            color: red;
+        }
+
+        main {
+            padding: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <nav>
+            <a href="#">Brand Logo</a>
+            <ul id="main-menu">
+                <li>item1</li>
+                <li>item2</li>
+                <li>item3</li>
+                <li>item4</li>
+                <li>item5</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 id="main-title">Titolo della pagina</h1>
+        <p class="subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, doloremque dolorem? Velit,
+            alias, a
+            laudantium reprehenderit ipsam molestiae aliquid perspiciatis asperiores unde vel voluptatem illum ad id.
+            Autem, officia iusto?</p>
+
+        <article class="first-article">
+            <h3>titolo dell'articolo</h3>
+            <p class="body-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi rerum sapiente
+                tenetur quasi quae
+                quaerat alias, natus asperiores! Fuga officiis mollitia pariatur animi perspiciatis ullam soluta unde
+                molestiae, repellat odit?
+                Quod recusandae culpa in tempora odio esse dolorem ea quam itaque adipisci, non, aliquid nihil sint
+                corporis, perspiciatis impedit inventore tenetur nemo. Quos voluptates maxime dolorum id perspiciatis
+                aliquid nihil.
+                Omnis magnam obcaecati necessitatibus. Fugit asperiores ullam quasi, nulla recusandae repudiandae magni!
+                Repellat enim sunt quas cum eaque reiciendis consequatur magni magnam labore itaque voluptas
+                accusantium, ipsum, tempora unde porro.</p>
+            <ul>
+                <li>sono un elemento lista</li>
+                <li>sono un elemento lista</li>
+                <li>sono un elemento lista</li>
+                <li>sono un elemento lista</li>
+                <li>sono un elemento lista</li>
+                <li>sono un elemento lista</li>
+                <li>sono un elemento lista</li>
+                <li>sono un elemento lista</li>
+            </ul>
+            <p class="body-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi rerum sapiente
+                tenetur quasi quae
+                quaerat alias, natus asperiores! Fuga officiis mollitia pariatur animi perspiciatis ullam soluta unde
+                molestiae, repellat odit?
+                Quod recusandae culpa in tempora odio esse dolorem ea quam itaque adipisci, non, aliquid nihil sint
+                corporis, perspiciatis impedit inventore tenetur nemo. Quos voluptates maxime dolorum id perspiciatis
+                aliquid nihil.
+                Omnis magnam obcaecati necessitatibus. Fugit asperiores ullam quasi, nulla recusandae repudiandae magni!
+                Repellat enim sunt quas cum eaque reiciendis consequatur magni magnam labore itaque voluptas
+                accusantium, ipsum, tempora unde porro.</p>
+        </article>
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
